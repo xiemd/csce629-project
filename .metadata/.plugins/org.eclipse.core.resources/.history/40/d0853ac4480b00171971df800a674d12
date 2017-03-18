@@ -1,0 +1,7 @@
+
+public class GraphGenerator {
+	private 
+	public static randomGraph1(int vertices, int degree){
+		
+	}
+}

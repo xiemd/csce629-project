@@ -1,0 +1,30 @@
+
+import java.util.ArrayList;
+import java.util.Random;
+
+
+
+public class Graph1 {
+	int vertices;
+	int edges;
+	ArrayList<Edge>[] adj;
+	
+	public Graph1(int vertices) {
+		this.vertices = vertices;
+		for (int i = 0; i < vertices; i++){
+			adj[i] = new ArrayList<Edge> ();
+		}
+	}
+	public void addEdge (int start, int end){
+		Edge e = new Edge(start, end);
+		adj[start].add(e);
+		adj[end].add(e);
+		edges++;
+	}
+	public boolean isEdge(int start, int end){
+		Edge e  = new Edge(start, end);
+		return adj[start].contains(e);
+	}
+}
+
+

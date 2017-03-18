@@ -1,0 +1,10 @@
+
+public class test {
+	public static void main(String[] args){
+		graph g2 = new graph(10);
+		Edge e1 = new Edge(1,2);
+		Edge e2 = new Edge(1,2);
+		g2.addEdge(e1);
+		g2.addEdge(e2);
+	}
+}

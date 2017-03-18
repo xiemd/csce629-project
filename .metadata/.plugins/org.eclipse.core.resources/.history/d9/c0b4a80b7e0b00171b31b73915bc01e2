@@ -1,0 +1,38 @@
+import java.beans.DefaultPersistenceDelegate;
+
+import javax.swing.text.DefaultEditorKit.InsertBreakAction;
+
+public class maxHeap {
+	private int[] vertices; //record the vertices
+	private int[] values; // record the vertices' value
+	
+	public maxHeap(graph g) {
+		vertices = new int[g.vertices + 1];
+		values = new int[g.vertices + 1];
+		for (int i = 1; i <= g.vertices; i++){ 
+			vertices[i] = i; 
+			values[i] = 0;
+		}
+		
+	}
+	public pair Maximum(){
+		return new pair(vertices[1], values[vertices[1]]); 
+	}
+	
+	public insert(maxHeap H, ){
+		
+	}
+	public delete()
+	
+	public heapFind(pair)
+	
+}
+	
+	private class pair{
+		int vertex;
+		int value;
+		private pair(int vertex, int value){
+			this.vertex = vertex;
+			this.value = value;
+		}
+	}

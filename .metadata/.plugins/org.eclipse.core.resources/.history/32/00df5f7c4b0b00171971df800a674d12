@@ -1,0 +1,35 @@
+import java.util.Random;
+
+public class GraphGenerator { 
+	
+	public static graph randomGraph1(int vertices, int degree){
+		if(vertices * degree % 2 != 0) throw new IllegalArgumentException("vertices * degree must be even number");
+		graph g = new graph(vertices);
+//		create a list with degree copies of vertices 
+		int [] vertexArray = new int[vertices * degree];
+		for(int i = 0; i < vertices; i++){
+			for (int j = 0; j < degree; j++){
+				vertexArray[i * degree + j] = i;
+			}
+		}
+// 		shuffle the elements
+		Random rand = new Random();
+		for (int k = 0; k < vertexArray.length; k++){
+			int temp = vertexArray[k];
+			int randIndex = rand.nextInt(vertexArray.length);
+			vertexArray[k] = vertexArray[randIndex];
+			vertexArray[randIndex] = temp;
+		}
+		
+// 		connected pair vertices in order
+		for (int l = 0; l < vertexArray.length; l++){
+			int start = vertexArray[l];
+			int end = vertexArray[l + 1];
+			g.addEdge(start, end);
+		}
+		return g;
+	}
+	public static randomGraph2(int vertices, double percentage){
+		
+	}
+}

@@ -1,0 +1,21 @@
+import java.beans.DefaultPersistenceDelegate;
+
+import javax.swing.text.DefaultEditorKit.InsertBreakAction;
+
+public class maxHeap {
+	private int[] H; //record the vertices
+	private int[] D; // record the vertices' value
+	
+	public maxHeap(graph g) {
+		H = new 
+		// TODO Auto-generated constructor stub
+		
+	}
+	public Maximum()
+	public insert(maxHeap H, Integer value){
+		
+	}
+	public delete()
+	public heapFind()
+	
+}

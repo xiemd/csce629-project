@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Main{
+	public static void main(String[] args){
+		graph g1 = GraphGenerator.randomGraph1(10, 3);
+		System.out.println(g1.edge);
+		for (ArrayList<Edge> l : g1.adj){
+			System.out.println(l);
+		}
+		
+	}
+}
+
+
+
+
+

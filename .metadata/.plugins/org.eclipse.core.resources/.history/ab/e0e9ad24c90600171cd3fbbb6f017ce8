@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Graph1 {
+	int degree;
+	int vertices;
+	int edges;
+	ArrayList<Edge>[] adj;
+	
+	public Graph1(int vertices,int degree) {
+		this.degree = degree;
+		this.vertices = vertices;
+		Random rand = new Random();
+		this.adj = (ArrayList<Edge>[])new ArrayList[vertices];
+
+//		initial vertices
+		for (int i = 0; i < vertices; i++){
+			this.adj[i] = new ArrayList<Edge> ();
+		}
+		for (int i = 0; i < vertices; i++ ){
+//		random add the edge to exactly certain degree for each vertex
+			while (adj[i].size() < degree){
+				int newVertex = rand.nextInt(vertices);
+				if(adj[newVertex].size() < degree){
+					this.addEdge(i,newVertex);
+				}
+			}
+		}
+	}
+	
+	public void addEdge (int start, int end){
+		Edge e1 = new Edge(start, end);
+		Edge e2 = new Edge(end,start);
+		adj[start].add(e1);
+		adj[end].add(e2);
+		edges++;
+	}
+	public boolean isEdge(int start, int end){
+		Edge e  = new Edge(start, end);
+		return adj[start].contains(e);
+	}
+}

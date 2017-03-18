@@ -1,0 +1,11 @@
+public class Main{
+	public static void main(String[] args){
+		graph g1 = GraphGenerator.randomGraph1(100, 3);
+		System.out.println(g1.adj);
+	}
+}
+
+
+
+
+

@@ -1,0 +1,15 @@
+
+public class Edge {
+	private int start;
+	private int end;
+	private double weight;
+	
+	public Edge(int start, int end){
+		this.start = start;
+		this.end = end;
+	}
+	public void addWeight(double weight){
+		this.weight = weight;
+	}
+	
+}

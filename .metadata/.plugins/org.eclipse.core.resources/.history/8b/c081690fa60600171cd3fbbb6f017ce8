@@ -1,0 +1,14 @@
+public class Main{
+	public static void Main(String[] args){
+		Graph1 g1 = new Graph1(10, 2);
+		for (int i = 0; i < g1.adj.length; i++){
+			System.out.println(g1.adj[i]);
+		}
+		
+	}
+}
+
+
+
+
+

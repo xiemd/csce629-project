@@ -1,0 +1,12 @@
+public class Main{
+	public static void Main(String[] args){
+		Graph1 g1 = new Graph1(10, 2);
+		
+		
+	}
+}
+
+
+
+
+

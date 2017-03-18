@@ -1,0 +1,38 @@
+
+public class Edge {
+	private int start;
+	private int end;
+	private double weight;
+	
+	public Edge(int start, int end){
+		if (start < end){
+			this.start = start;
+			this.end = end;
+		}else{
+			this.start = end;
+			this.end = start;
+		}
+	}
+	
+	public int compareTo(Edge that){
+		if (this.start < that.start) return -1;
+		if (this.start > that.start) return +1;
+		if (this.end < that.end) return -1;
+		if (this.end > that.end) return +1;
+		return 0;
+	}
+	
+	public void addWeight(double weight){
+		this.weight = weight;
+	}
+	public String toString(){
+		return start + "-" + end;
+	}
+//	public static void main(String[] args){
+//		Edge a = new Edge(2, 1);
+//		System.out.println(a);
+//				
+//	}
+}
+
+
