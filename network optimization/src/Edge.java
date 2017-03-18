@@ -30,7 +30,7 @@ public class Edge {
 		return true;
 	}
 	
-	public void addWeight(double weight){
+	public void addWeight(int weight){
 		this.weight = weight;
 	}
 	public String toString(){
