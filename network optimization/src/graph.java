@@ -19,6 +19,19 @@ public class graph {
 		this.adj[e.end].add(e);
 		edge++;
 	}
+	
+	public int getWeight(int start, int end){
+		int result = 0;
+		ArrayList<Edge> list = adj[start];
+		for (Edge e : list){
+			if (e.end == end){
+				result = e.weight;
+				break;
+			}
+		}
+		return result;
+	}
+	
 	private void validate(int start, int vertices){
 		if (start < 0 || start >= vertices) throw new IllegalArgumentException("the starting node is not in the right range");
 				

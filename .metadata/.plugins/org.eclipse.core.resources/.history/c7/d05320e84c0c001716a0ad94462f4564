@@ -1,0 +1,23 @@
+import java.util.Arrays;
+
+public class RoutingAlgo {
+//	Max-Bandwidth-Path from djkstra's algorithm without heap
+	public static int[] algo1(graph g, int s, int t){
+//		initial the bandwidth, data and fringe array
+		int[] bandwidth = new int[g.vertices + 1];
+		int[] dad = new int[g.vertices + 1];
+		int[] fringe = new int[g.vertices + 1];
+		Arrays.fill(bandwidth, 101); //the maximum is 100
+		Arrays.fill(dad, -1);
+		//initial the source and fringe
+		return dad;
+	}
+//	Max-Bandwidth-Path from djkstra's algorithm with heap
+	public static int[] algo2(graph g, int s, int t){
+		
+	}
+//	Max-Bandwidth-Path from Kruskal algo
+	public static int[] algo3(graph g, int s, int t){
+		
+	}
+}

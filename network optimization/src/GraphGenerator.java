@@ -49,7 +49,7 @@ public class GraphGenerator {
 				double randProbability = rand.nextDouble();
 				if (randProbability <= percentage){
 					Edge e = new Edge(start,end);
-					int randweight = rand.nextInt(20);
+					int randweight = rand.nextInt(100);
 					e.weight = randweight;
 					g.addEdge(e);
 				}

@@ -42,7 +42,6 @@ public class maxHeap {
 	
 	private void heapify(int position){
 //		move the vertex up or down to the right position
-
 		int currentVal = values[vertices[position]];
 //		go up if position is not 1 and value is larger than father
 		if (position > 1 && currentVal >= values[vertices[position / 2]]){
@@ -52,7 +51,7 @@ public class maxHeap {
 				swap(h, h / 2);
 				h = h / 2;
 			}
-//			go down if position is not leaf and value is smaller than maximum child
+//		go down if position is not leaf and value is smaller than maximum child
 		}else if(position * 2 <= size && values[vertices[position]] < Math.max(values[vertices[position * 2]], values[vertices[position * 2 + 1]])){
 			int h = position;
 			int sonVal1 = values[vertices[position * 2]];
