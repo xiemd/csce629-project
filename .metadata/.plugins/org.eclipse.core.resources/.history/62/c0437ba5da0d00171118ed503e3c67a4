@@ -1,0 +1,112 @@
+import java.lang.Math;
+import java.util.Arrays;
+
+public class maxHeap {
+	
+
+	int[] vertices; //record the vertices name of the heap
+	int[] values; // record the vertices'value
+	int[] pos;//record the vertices' position
+	int size = 0;
+	
+	public maxHeap(int number) {
+		vertices = new int[number + 1];
+		values = new int[number + 1];
+		pos = new int[number + 1];
+		for (int i = 1; i <= number; i++){ 
+			vertices[i] = 0; // i is the position of the heap, value is the vertex's name
+			values[i] = 0; // i is the vertex's name, return the value of the vertex
+			pos[i] = 0;//i is the vertex's name, return the position on the heap
+		}
+	}
+	
+	public maxHeap(graph g) {
+		vertices = new int[g.vertices + 1];
+		values = new int[g.vertices + 1];
+		pos = new int[g.vertices + 1];
+		for (int i = 1; i <=g.vertices; i++){ 
+			vertices[i] = 0; // i is the position of the heap, value is the vertex's name
+			values[i] = 0; // i is the vertex's name, return the value of the vertex
+			pos[i] = 0;//i is the vertex's name, return the position on the heap
+		}
+	}
+//	return the vertex with maximum value
+	public int Maximum(){
+		return vertices[1];
+	}
+	
+	public void insert(int vertex, int value){
+		size++;
+		vertices[size] = vertex;
+		pos[vertex] = size; 
+		values[vertex] = value;
+		heapify(size);
+	}
+	public void delete(int vertex){
+		int position = pos[vertex];
+//		find the vertex's position, swap it with the last vertex, and delete the last vertex;
+		swap(position, size);
+		vertices[size] = 0;
+		pos[vertex] = 0;
+		size--;
+		heapify(position);
+	}
+	
+	private void heapify(int position){
+		int vertex = vertices[position];
+		int currentVal = values[vertex];
+
+//		go up if position is not 1 and value is larger than father
+		if (position > 1 && currentVal >= values[vertices[position / 2]]){
+			int fatherVal = values[vertices[position / 2]];
+			
+			int h = position;
+			while (h > 1 && currentVal >= fatherVal){
+				swap(h, h / 2);
+				h = h / 2;
+//				record the vertex position of the heap
+			}
+//		go down if position is not leaf and value is smaller than maximum child
+		}else if(position * 2 <= size && values[vertex] < Math.max(values[vertices[position * 2]], values[vertices[position * 2 + 1]])){
+			int h = position;
+			int sonVal1 = values[vertices[position * 2]];
+			int sonVal2 = values[vertices[position * 2 + 1]];
+			
+			while (h * 2 <= size && currentVal < Math.max(sonVal2, sonVal1)){
+				if (sonVal1 >= sonVal2){
+					swap(h, h * 2);
+					h = h * 2;
+				}else{
+					swap(h, h * 2 + 1);
+					h = h * 2 + 1;
+				}
+//				record the vertex position of the heap
+
+			}
+		}else{ 
+			return;
+		}
+	}
+	
+	public String getValues(){
+		return  Arrays.toString(values);
+	}
+
+	private void swap (int position1,int position2){
+		int vertex1 = vertices[position1];
+		int vertex2 = vertices[position2];
+		
+//		update the vertex position in verteices[]
+		int temp = vertex1;
+		vertices[position1] = vertex2;
+		vertices[position2] = temp;
+		
+//		update the pos[] index of those vertices
+		int tempPos = pos[vertex1];
+		pos[vertex1] = pos[vertex2];
+		pos[vertex2] = tempPos;
+		
+	}
+}
+
+	
