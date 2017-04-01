@@ -22,12 +22,12 @@ public class GraphGenerator {
 				Edge e = new Edge(start, end);
 				if (!g.adj[start].contains(e)){
 					g.addEdge(start, end, rand.nextInt(100));
-					System.out.println(e);
 					d[start]++;
 					d[end]++;
 				}
 			}
 		}
+		System.out.println(g.edge);
 		return g;
 	}
 	
@@ -44,6 +44,7 @@ public class GraphGenerator {
 				}
 			}
 		}
+		System.out.println(g.edge);
 		return g;
 	}
 }

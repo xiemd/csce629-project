@@ -2,9 +2,26 @@ import java.util.Random;
 
 public class test {
 	public static void main(String[] args){
-		graph g = GraphGenerator.randomGraph1(5000, 6);
-		System.out.println(g.edge);
+//		Random rand = new Random();
+//		Edge[] edges = new Edge[10];
+//		for (int i = 0; i < 10; i++){
+//			Edge e = new Edge(i,i+1);
+//			e.weight = rand.nextInt(20);
+//			edges[i] = e;
+//		}
+//		
+//		HeapSort test = new HeapSort();
+//		Edge[] a = test.sort(edges);
+//		for (int i = 0; i < 10; i++){
+//			System.out.println(edges[i].weight);
+//		}
+//		
 		
+		
+		
+//		graph g = GraphGenerator.randomGraph1(5000, 6);
+//		System.out.println(g.edge);
+//		
 
 		
 		
@@ -16,8 +33,8 @@ public class test {
 //		Edge e = new Edge(1, 2);
 //		System.out.println(test.adj[2].contains(e));
 		
-		
-		
+//		
+//		
 //		graph g = new graph(9);
 //		g.addEdge(1,2, 4);
 //		g.addEdge(2,3, 8);
@@ -43,11 +60,15 @@ public class test {
 //				System.out.println(e);
 //			}
 //		}
-		
-//		System.out.println(RoutingAlgo.algo1(g, 1, 5)); 
-//		System.out.println(RoutingAlgo.algo2(g, 1, 5));
-//		
+//		RoutingAlgo.algo1(g, 1, 5); 
+//		System.out.println("");
+//		RoutingAlgo.algo2(g, 1, 5);
+//		System.out.println("");
+//		RoutingAlgo.algo3(g, 1, 5); 
 
+
+
+		
 				
 		
 		

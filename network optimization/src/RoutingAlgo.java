@@ -1,9 +1,14 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import java.util.Stack;
 
 public class RoutingAlgo {
 //	Max-Bandwidth-Path from djkstra's algorithm without heap
-	public static int algo1(graph g, int s, int t){
+	public static void algo1(graph g, int s, int t){
 //		initial the bandwidth, data and fringe array
 		int[] bandwidth = new int[g.vertices + 1];
 		int[] dad = new int[g.vertices + 1];
@@ -52,12 +57,19 @@ public class RoutingAlgo {
 				}
 			}
 		}
-		return bandwidth[t];
+		int k = t;
+		
+		System.out.println(k);
+		while(dad[k] != 0){
+			k = dad[k];
+			System.out.println(k);
+		}
+		System.out.println("the bandwidth is " + bandwidth[t]);
 	}
 
 	
 	//	Max-Bandwidth-Path from djkstra's algorithm with heap
-	public static int algo2(graph g, int s, int t){
+	public static void algo2(graph g, int s, int t){
 //		initial the bandwidth, data and fringe array
 		int[] bandwidth = new int[g.vertices + 1];
 		int[] dad = new int[g.vertices + 1];
@@ -115,15 +127,83 @@ public class RoutingAlgo {
 				}
 			}
 		}
-		return bandwidth[t];
-	}
-
-	
-	//	Max-Bandwidth-Path from Kruskal algo
-	public static int[] algo3(graph g, int s, int t){
+		int k = t;
+		System.out.println(k);
+		while(dad[k] != 0){
+			k = dad[k];
+			System.out.println(k);
+		}
+		System.out.println("the bandwidth is " + bandwidth[t]);
 		
 	}
 	
+	//	Max-Bandwidth-Path from Kruskal algo
+	public static void algo3(graph g, int s, int t){
+		graph g1 = new graph(g.vertices);
+
+//		heap sort the edges increasingly		
+		List<Edge> temp = new ArrayList<Edge>();
+		for (int i = 0; i < g.vertices; i++){
+			for (Edge e : g.adj[i+1]){
+				temp.add(e);
+			} 
+		}
+		Set<Edge> hs = new HashSet<Edge>();
+		hs.addAll(temp);
+		Edge[] edges = hs.toArray(new Edge[hs.size()]);
+		
+		
+		HeapSort a = new HeapSort();
+		Edge[] sorted_edges = a.sort(edges);
+//		make set for all vertex
+		int[] D = new int[g.vertices + 1];  //record vertex's root
+		int[] R = new int[g.vertices + 1];	//record vertex's rank
+		MakeSet(g.vertices, D, R);
+//		pick the largest edge in order and union£¬ add the edge to the new created graph
+		for (int i = g.edge - 1; i>=0 ;i--){
+			Edge e = edges[i];
+			int r1 = Find(e.start,D);
+			int r2 = Find(e.end,D);
+			int j = i - g.vertices + 1;
+			if ( r1 != r2 ){
+				g1.addEdge(e.start, e.end, e.weight);
+				Union(R, D, r1, r2);
+			}
+		}
+		traverse(s, t, g1);
+	}
+	
+//	helper method for algo3 kruscal algorithm
+	
+	private static void MakeSet(int vertices, int[] D, int[] R){
+		for (int i = 1; i <= vertices; i++){
+			D[i] =  0;
+			R[i] =  0;
+			}
+	}
+	private static int Find(int vertex, int[] D){
+		int cur = vertex;
+		while(D[cur] != 0){
+			cur = D[cur];		
+		}
+		return cur;
+	}
+	
+	
+	private static void Union(int[] R, int[] D, int u, int v){
+		if (R[u] > R[v]){
+			D[v] = u;
+		}else if (R[u] < R[v]){
+			D[u] = v;
+		}else{
+			D[v] = u;
+			R[u]++;
+		}
+	}
+	
+	
+	
+//	helper method for algo1 for normal dijstra algorithm
 	private static int findMax(int[] bandwidth, int[] status ){
 		int index = 0;
 		int max = 0;
@@ -136,19 +216,51 @@ public class RoutingAlgo {
 		}
 		return index;
 	}
-	private static boolean notInTree(int[] status){
-		for (int i : status){
-			if (i == 0 || i == 1){
-				return true;
+	
+//helper method for get the path from source to destination in a graph in algo3
+	private static void traverse(int s, int t, graph g){
+//		BFS the maximum spanning tree graph, and update dad and bandwidth array
+		LinkedList<Integer> queue = new LinkedList<Integer>();
+		int[] dad = new int[g.vertices+1];
+		int[] color = new int[g.vertices+1];
+		int[] bandwidth = new int[g.vertices+1];
+		Arrays.fill(color, 0);
+//		Start the BFS
+		color[s] = 1;
+		queue.add(s);
+		bandwidth[s] = 101;  //larger than max weight
+		while(queue.size() != 0){
+			int u = queue.poll();//pull out the frindge
+			if (u != t){
+//				determine the end
+				for (Edge e : g.adj[u]){
+					int end = e.end;
+					if (end == u){
+						end = e.start;
+					}
+					if (color[end] != 1){
+						queue.add(end);
+						color[end] = 1;
+						dad[end] = u;
+					}
+					
+//					keep updating the path's bandwidth
+					if(e.weight < bandwidth[u]){
+						bandwidth[end] = e.weight;
+					}else{
+						bandwidth[end] = bandwidth[u];
+					}
+				}
 			}
 		}
-		return false;
+//		print out the path and bandwidth
+		int w = t;
+		System.out.println(w);
+		while(dad[w] != 0){
+			w = dad[w];
+			System.out.println(w);
+		}
+		System.out.println("the bandwidth is " + bandwidth[t]);
 	}
-//	for kruscal algorithm
-	private class node{
-		private int vertex;
-		private int weight;
-		
-		
-	}
+
 }
