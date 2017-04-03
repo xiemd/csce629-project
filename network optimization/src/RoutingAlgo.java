@@ -14,8 +14,6 @@ public class RoutingAlgo {
 		int[] dad = new int[g.vertices + 1];
 		int[] status = new int[g.vertices + 1];
 		
-		Arrays.fill(status, 0); //unseen = 0 , fringe = 1, in-tree = 2
-		
 //		initial the source and fringe
 		dad[s] = 0;
 		bandwidth[s] = 101;//the maximum weight i set is 100
@@ -57,14 +55,13 @@ public class RoutingAlgo {
 				}
 			}
 		}
-		int k = t;
-		
-		System.out.println(k);
-		while(dad[k] != 0){
-			k = dad[k];
-			System.out.println(k);
-		}
-		System.out.println("the bandwidth is " + bandwidth[t]);
+//		int k = t;		
+//		System.out.println(k);
+//		while(dad[k] != 0){
+//			k = dad[k];
+//			System.out.println(k);
+//		}
+//		System.out.println("the bandwidth is " + bandwidth[t]);
 	}
 
 	
@@ -127,13 +124,13 @@ public class RoutingAlgo {
 				}
 			}
 		}
-		int k = t;
-		System.out.println(k);
-		while(dad[k] != 0){
-			k = dad[k];
-			System.out.println(k);
-		}
-		System.out.println("the bandwidth is " + bandwidth[t]);
+//		int k = t;
+//		System.out.println(k);
+//		while(dad[k] != 0){
+//			k = dad[k];
+//			System.out.println(k);
+//		}
+//		System.out.println("the bandwidth is " + bandwidth[t]);
 		
 	}
 	
@@ -254,13 +251,13 @@ public class RoutingAlgo {
 			}
 		}
 //		print out the path and bandwidth
-		int w = t;
-		System.out.println(w);
-		while(dad[w] != 0){
-			w = dad[w];
-			System.out.println(w);
-		}
-		System.out.println("the bandwidth is " + bandwidth[t]);
+//		int w = t;
+//		System.out.println(w);
+//		while(dad[w] != 0){
+//			w = dad[w];
+//			System.out.println(w);
+//		}
+//		System.out.println("the bandwidth is " + bandwidth[t]);
 	}
 
 }

@@ -11,7 +11,6 @@
 <fullyQualifiedTypeName name="Graph1"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="maxHeap"/>
-<fullyQualifiedTypeName name="RoutingAlgo"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="Edge"/>
 <fullyQualifiedTypeName name="HeapSort"/>
@@ -21,7 +20,8 @@
 <fullyQualifiedTypeName name="graph"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="GraphGenerator"/>
+<fullyQualifiedTypeName name="RoutingAlgo"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,243 @@
+15000
+2500238
+15000
+2497926
+15000
+2499067
+15000
+2499786
+15000
+2500205
+the graph generation is done!
+
+Start the test:
+1 graphs
+1 pair of (s,t) of graph pair1
+
+rdg1 time on algorithm 1 is: 44ms
+rdg1 time on algorithm 2 is: 9ms
+rdg1 time on algorithm 3 is: 23ms
+
+rdg2 time on algorithm 1 is: 3655ms
+rdg2 time on algorithm 2 is: 2185ms
+rdg2 time on algorithm 3 is:2737ms
+2 pair of (s,t) of graph pair1
+
+rdg1 time on algorithm 1 is: 26ms
+rdg1 time on algorithm 2 is: 4ms
+rdg1 time on algorithm 3 is: 9ms
+
+rdg2 time on algorithm 1 is: 3611ms
+rdg2 time on algorithm 2 is: 4941ms
+rdg2 time on algorithm 3 is:2568ms
+3 pair of (s,t) of graph pair1
+
+rdg1 time on algorithm 1 is: 9ms
+rdg1 time on algorithm 2 is: 1ms
+rdg1 time on algorithm 3 is: 7ms
+
+rdg2 time on algorithm 1 is: 3009ms
+rdg2 time on algorithm 2 is: 4682ms
+rdg2 time on algorithm 3 is:2559ms
+4 pair of (s,t) of graph pair1
+
+rdg1 time on algorithm 1 is: 2ms
+rdg1 time on algorithm 2 is: 16ms
+rdg1 time on algorithm 3 is: 15ms
+
+rdg2 time on algorithm 1 is: 918ms
+rdg2 time on algorithm 2 is: 878ms
+rdg2 time on algorithm 3 is:2584ms
+5 pair of (s,t) of graph pair1
+
+rdg1 time on algorithm 1 is: 18ms
+rdg1 time on algorithm 2 is: 2ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 3891ms
+rdg2 time on algorithm 2 is: 2667ms
+rdg2 time on algorithm 3 is:2525ms
+2 graphs
+1 pair of (s,t) of graph pair2
+
+rdg1 time on algorithm 1 is: 18ms
+rdg1 time on algorithm 2 is: 5ms
+rdg1 time on algorithm 3 is: 17ms
+
+rdg2 time on algorithm 1 is: 2909ms
+rdg2 time on algorithm 2 is: 2036ms
+rdg2 time on algorithm 3 is:2606ms
+2 pair of (s,t) of graph pair2
+
+rdg1 time on algorithm 1 is: 1ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 3151ms
+rdg2 time on algorithm 2 is: 397ms
+rdg2 time on algorithm 3 is:2517ms
+3 pair of (s,t) of graph pair2
+
+rdg1 time on algorithm 1 is: 1ms
+rdg1 time on algorithm 2 is: 2ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 2542ms
+rdg2 time on algorithm 2 is: 958ms
+rdg2 time on algorithm 3 is:2657ms
+4 pair of (s,t) of graph pair2
+
+rdg1 time on algorithm 1 is: 32ms
+rdg1 time on algorithm 2 is: 6ms
+rdg1 time on algorithm 3 is: 12ms
+
+rdg2 time on algorithm 1 is: 4308ms
+rdg2 time on algorithm 2 is: 2652ms
+rdg2 time on algorithm 3 is:2534ms
+5 pair of (s,t) of graph pair2
+
+rdg1 time on algorithm 1 is: 31ms
+rdg1 time on algorithm 2 is: 2ms
+rdg1 time on algorithm 3 is: 0ms
+
+rdg2 time on algorithm 1 is: 1354ms
+rdg2 time on algorithm 2 is: 3894ms
+rdg2 time on algorithm 3 is:2612ms
+3 graphs
+1 pair of (s,t) of graph pair3
+
+rdg1 time on algorithm 1 is: 5ms
+rdg1 time on algorithm 2 is: 1ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 3348ms
+rdg2 time on algorithm 2 is: 5283ms
+rdg2 time on algorithm 3 is:2702ms
+2 pair of (s,t) of graph pair3
+
+rdg1 time on algorithm 1 is: 2ms
+rdg1 time on algorithm 2 is: 2ms
+rdg1 time on algorithm 3 is: 7ms
+
+rdg2 time on algorithm 1 is: 2612ms
+rdg2 time on algorithm 2 is: 5085ms
+rdg2 time on algorithm 3 is:2625ms
+3 pair of (s,t) of graph pair3
+
+rdg1 time on algorithm 1 is: 4ms
+rdg1 time on algorithm 2 is: 1ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 1672ms
+rdg2 time on algorithm 2 is: 2050ms
+rdg2 time on algorithm 3 is:2521ms
+4 pair of (s,t) of graph pair3
+
+rdg1 time on algorithm 1 is: 22ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 0ms
+
+rdg2 time on algorithm 1 is: 2506ms
+rdg2 time on algorithm 2 is: 1620ms
+rdg2 time on algorithm 3 is:2598ms
+5 pair of (s,t) of graph pair3
+
+rdg1 time on algorithm 1 is: 0ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 20ms
+
+rdg2 time on algorithm 1 is: 4299ms
+rdg2 time on algorithm 2 is: 1143ms
+rdg2 time on algorithm 3 is:2614ms
+4 graphs
+1 pair of (s,t) of graph pair4
+
+rdg1 time on algorithm 1 is: 11ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 223ms
+rdg2 time on algorithm 2 is: 4043ms
+rdg2 time on algorithm 3 is:2488ms
+2 pair of (s,t) of graph pair4
+
+rdg1 time on algorithm 1 is: 16ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 16ms
+
+rdg2 time on algorithm 1 is: 3052ms
+rdg2 time on algorithm 2 is: 2534ms
+rdg2 time on algorithm 3 is:2588ms
+3 pair of (s,t) of graph pair4
+
+rdg1 time on algorithm 1 is: 1ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 3790ms
+rdg2 time on algorithm 2 is: 4663ms
+rdg2 time on algorithm 3 is:2649ms
+4 pair of (s,t) of graph pair4
+
+rdg1 time on algorithm 1 is: 0ms
+rdg1 time on algorithm 2 is: 1ms
+rdg1 time on algorithm 3 is: 7ms
+
+rdg2 time on algorithm 1 is: 1175ms
+rdg2 time on algorithm 2 is: 1337ms
+rdg2 time on algorithm 3 is:2488ms
+5 pair of (s,t) of graph pair4
+
+rdg1 time on algorithm 1 is: 4ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 0ms
+
+rdg2 time on algorithm 1 is: 575ms
+rdg2 time on algorithm 2 is: 3046ms
+rdg2 time on algorithm 3 is:2495ms
+5 graphs
+1 pair of (s,t) of graph pair5
+
+rdg1 time on algorithm 1 is: 11ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 16ms
+
+rdg2 time on algorithm 1 is: 4382ms
+rdg2 time on algorithm 2 is: 4234ms
+rdg2 time on algorithm 3 is:2600ms
+2 pair of (s,t) of graph pair5
+
+rdg1 time on algorithm 1 is: 9ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 15ms
+
+rdg2 time on algorithm 1 is: 2852ms
+rdg2 time on algorithm 2 is: 4967ms
+rdg2 time on algorithm 3 is:2677ms
+3 pair of (s,t) of graph pair5
+
+rdg1 time on algorithm 1 is: 1ms
+rdg1 time on algorithm 2 is: 1ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 750ms
+rdg2 time on algorithm 2 is: 903ms
+rdg2 time on algorithm 3 is:2546ms
+4 pair of (s,t) of graph pair5
+
+rdg1 time on algorithm 1 is: 7ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 7ms
+
+rdg2 time on algorithm 1 is: 1775ms
+rdg2 time on algorithm 2 is: 2924ms
+rdg2 time on algorithm 3 is:2656ms
+5 pair of (s,t) of graph pair5
+
+rdg1 time on algorithm 1 is: 5ms
+rdg1 time on algorithm 2 is: 0ms
+rdg1 time on algorithm 3 is: 6ms
+
+rdg2 time on algorithm 1 is: 1403ms
+rdg2 time on algorithm 2 is: 1965ms
+rdg2 time on algorithm 3 is:2507ms

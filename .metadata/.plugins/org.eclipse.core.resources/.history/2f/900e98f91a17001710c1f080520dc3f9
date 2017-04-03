@@ -1,0 +1,81 @@
+import java.util.Arrays;
+import java.util.Random;
+
+public class GraphGenerator { 
+	
+	public static graph randomGraph1(int vertices, int degree){
+		if(vertices * degree % 2 != 0) throw new IllegalArgumentException("vertices * degree must be even number");	
+		
+		graph g = new graph(vertices);
+		Random rand = new Random();
+		int start = 0;
+		int end = 0;
+//		record the degree of each vertex
+		int[] d = new int[vertices + 1];
+		int i = 0;
+		
+		while(true){
+			if (i++ == 100000){
+				break;
+			}
+			end = rand.nextInt(vertices) + 1;
+			start = rand.nextInt(vertices) + 1;
+			if (d[start] < degree && d[end] < degree && start != end){
+				Edge e = new Edge(start, end);
+				if (!g.adj[start].contains(e)){
+					g.addEdge(start, end, rand.nextInt(100));
+//					System.out.println(e);
+					d[start]++;
+					d[end]++;
+				}
+			}
+			if (g.edge < vertices * degree / 2 ){
+				break;
+			}	
+		}
+		System.out.println(g.edge);
+		return g;
+	
+		
+		
+
+		
+		do{
+			g = new graph(vertices);
+//			record the vertices' count could be connect
+			int count = 0;
+
+			repeat = false;
+			int i = 0;
+			
+			while (){
+//				if the vertices needed to be connected can not generate enough edge to the proposed edges number
+				if (i++ == 100000 ){
+					repeat = true;
+					break;
+				}
+				rand.setSeed(System.currentTimeMillis());
+				
+			}
+		}while (repeat == true);
+
+	}
+	
+	
+// 	random graph 2
+	public static graph randomGraph2(int vertices, double percentage){
+		Random rand = new Random();
+		graph g = new graph(vertices);
+		
+		for (int start = 1; start <= vertices; start++){
+			for (int end = start + 1; end <= vertices; end++){
+				double randProbability = rand.nextDouble();
+				if (randProbability <= percentage){
+					g.addEdge(start, end, rand.nextInt(100));
+				}
+			}
+		}
+		System.out.println(g.edge);
+		return g;
+	}
+}

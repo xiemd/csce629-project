@@ -50,8 +50,9 @@ public class test {
 //		g.addEdge(9,7, 6);
 //		g.addEdge(3,6, 4);
 //		g.addEdge(4,6, 14);
-
-		
+//		g.addAllPath(3, 8);
+//		
+//		
 //		System.out.println(g.edge);
 		
 		

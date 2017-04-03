@@ -1,4 +1,8 @@
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
+import java.util.Set;
 
 public class graph {
 	int vertices;
@@ -44,6 +48,46 @@ public class graph {
 
 		}
 		return result;
+	}
+	public void addAllPath(int s, int t){
+//		collect all the edge
+		List<Edge> temp = new ArrayList<Edge>();
+		int [] vs = new int[this.vertices +1];
+		for (int i = 1; i <= this.vertices; i++){
+			for (Edge e : this.adj[i]){
+				temp.add(e);
+			} 
+		}
+		Set<Edge> hs = new HashSet<Edge>();
+		hs.addAll(temp);
+		
+// 		loop through the vertices, connect i and i++ vertex unless it has 
+		Random rand = new Random();
+		int first = 0;
+		int last = 0;
+		int count = 0;
+		for (int i  = 1; i < this.vertices; i++){
+			int start = i;
+			int end = i+1;
+			if (start == s || start == t) continue;
+			if (end == s || end == t) {
+				end++;
+			}
+			if (end > this.vertices) break;
+//			to record the first and last elements which are to be connected to s and t separately;
+			count ++;
+			if(count == 1){
+				first = start;
+			}
+			if (count == this.vertices - 3){
+				last = end;
+			}
+
+				this.addEdge(start, end, rand.nextInt(100));
+		}
+//		connect the s with first and t with the last
+		this.addEdge(last, t, rand.nextInt(100));
+		this.addEdge(s, first, rand.nextInt(100));
 	}
 }
 	
